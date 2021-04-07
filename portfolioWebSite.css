@@ -1,8 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Train+One&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Luckiest+Guy&display=swap');
 
 html, body {
     margin: 0;
+    overflow: hidden;
 }
 
 header {
@@ -11,6 +12,7 @@ header {
     align-items: center;
     height: 50px;
     background-color: black;
+    height: 100px;
 }
 
 #logo {
@@ -25,9 +27,11 @@ header {
 
 @keyframes logoFade {
     0% {
+        margin-left: -50px;
         opacity: 0;
     }   
     100% {
+        margin-left: 20px;
         opacity: 1;
     }
 }
@@ -43,9 +47,11 @@ header {
 
 @keyframes navFade {
     0% {
+        right: 0px;
         opacity: 0;
     }
     100% {
+        right: 40px;
         opacity: 1;
     }
 }
@@ -60,7 +66,7 @@ header {
     color: white;
     text-decoration: none;
     display: inline-block;
-    cursor: url()
+    cursor: crosshair;
 }
 
 #navbar ul li a:hover {
@@ -68,29 +74,122 @@ header {
 }
 
 #home {
-    height: 80vh;
+    height: 100vh;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: black;
+    animation-name: background-fill;
 }
 
 #home .center-text {
+    position: relative;
+    z-index: 1;
+    border: 1px solid rgb(255,50, 80);
+    border-radius: 50%;
+    height: 650px;
+    width: 650px;
     display: flex;
-    justify-content: center;
     flex-direction: column;
     align-items: center;
+    letter-spacing: 3px;
 }
+
+#home .center-text:hover {
+    animation: magentaFill 1s forwards;
+}
+
+@keyframes magentaFill {
+    100% {
+        background-color: rgb(255,50, 50);
+        cursor: pointer;
+    }
+}
+
+#home .blue {
+    position: absolute;
+    border: 1px solid rgb(100, 120, 240);
+    z-index: 0;
+    right: 635px;
+    border-radius: 50%;
+    height: 650px;
+    width: 650px;
+    animation-name: blueMove;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes blueMove {
+    0% {
+        opacity: 1;
+        right: 635px;
+    }
+    50% {
+        opacity: 1;
+        right: 0px;
+    }
+}
+
+#home .yellow {
+    position: absolute;
+    z-index: 0;
+    left: 635px;
+    border: 1px solid gold;
+    border-radius: 50%;
+    height: 650px;
+    width: 650px;
+    animation-name: yellowMove;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-fill-mode:forwards;
+}
+
+@keyframes yellowMove {
+    0% {
+        opacity: 1;
+        left: 635px;
+    }
+    50% {
+        opacity: 1;
+        left: 0px;
+    }
+}
+
+/*#home .yellow:hover {
+    /*add loading animation to hover animation so that the load animation doesn't restart
+    animation: yellowMove 2s 1, fillYellow 1s forwards;
+}*/
 
 #home .center-text h1 {
-    font-family: "Monoton";
-    letter-spacing: 5px;
-    font-size: 60px;
+    color: white;
+    position: relative;
+    z-index: 2;
+    font-family:"Bebas Neue";
+    text-align: center;
+    font-size: 70px;
+    line-height: 75px;
     margin-bottom: 0px;
+    animation-name: devName;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+    animation-duration: 1s;
 }
 
-#home .center-text p {
-    margin-top: 15px;
-    font-size: 40px;
+@keyframes devName {
+    0% {
+        top: -20px;
+        opacity: 0;
+    }
+    100% {
+        top: 0px;
+        opacity: 1;
+    }
 }
+
+
+
+
+
 
 
