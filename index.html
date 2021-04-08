@@ -12,10 +12,10 @@
         <h1 id="logo">CNII</h1>
         <nav id="navbar">
             <ul>
-                <li><a href="">Home</a></li>
-                <li><a href="">About Me</a></li>
-                <li><a href="">Projects</a></li>
-                <li><a href="">Contact</a></li>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
@@ -29,12 +29,48 @@
         <div class="yellow"></div>
     </section>
     <section id="about">
+        <div class="welcome">
+            <h1>Hello, and welcome to my developer web portfolio!</h1>
+        </div>
+        <article>
+            <h2>About Me</h2>
+            <hr>
+            <p>My name is Charles Nesmith II, and I am a Raleigh, NC based freelance developer with hands on experience in languages and frameworks such as, but not limited to; Python/Django, JavaScript/MERN, and C#/ASP.NET Core. I design and develop web applications as well as stand-alone software. I have completed over 300 hours toward certifications in Responsive Web Design, and over 1400+ hours in software development. Feel free to contact me to collab!</p>
+            <hr>
+        </article>
         <div class="circular-image">
             <img src="./nesmith.jpg" alt="picture of the developer">
         </div>
     </section>
-    <section id="projects"></section>
-    <section id="contact"></section>
+    <section id="projects">
+        <div class="project-message">
+            <h2>Projects in progress</h2>
+        </div>
+        <div class="space"></div>
+        <div id="project1">
+            <form action="">
+                <label for="title">Title</label>
+                <input type="text" id="title" name="title" placeholder="Day Trip Generator">
+                <label for="description">Description</label>
+                <input type="text" id="description" name="description" placeholder="A project made in devCodeCamp">
+                <label for="upload">Upload Image</label>
+                <input type="file" id="img-upload" name="image-upload" accept=".jpg, .png, .gif">
+                <input type="submit">
+            </form>
+        </div>
+    </section>
+    <section id="contact">
+        <div class="contact-header">
+            <h2>Please, feel free to reach out!</h2>
+            <p><i>Let's work together...</i></p> 
+        </div>
+        <div class="contact-links">
+            <p><a href="mailto:nesmith.charlesii@gmail.com">@ Send an Email</a></p>
+            <p><a id="" href="https://codepen.io/nesmith-charlesii">CodePen</a></p>
+            <p><a id="profile-link" href="https://github.com/Nesmith-Charlesii" target="_blank">GitHub</a>
+            <p><a href="tel:9198021911">Call me</a></p>
+        </div>
+    </section>
     <script type="text/javascript" src="portfolioWebsite.js"></script>
 </body>
 </html>

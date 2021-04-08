@@ -1,13 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Train+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Luckiest+Guy&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Shade&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mukta:wght@200&display=swap');
 
 html, body {
     margin: 0;
     overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 
 header {
+    position: fixed;
+    z-index: 2;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -83,6 +88,7 @@ header {
     align-items: center;
     background-color: black;
     animation-name: background-fill;
+    border-bottom: 2px solid rgb(218, 27, 50);
 }
 
 #home .center-text {
@@ -217,9 +223,12 @@ header {
 }
 
 #about {
-    background-color: white;
+    height: 100vh;
+    /*background-color: rgb(255, 238, 47);*/
     display: flex;
     justify-content: space-around;
+    align-items: center;
+    border-bottom: 2px solid rgb(100, 120, 240);
 }
 
 .circular-image {
@@ -229,11 +238,161 @@ header {
     overflow: hidden;
     display: inline-block;
     vertical-align: middle;
+    box-shadow: 5px 5px 8px black;
+    opacity: .4;
 }
 
 .circular-image img {
     width: 100%;
 }
+
+.circular-image:hover {
+    animation: imgRotate 2s forwards;
+}
+
+@keyframes imgRotate {
+    100% {
+        opacity: 1;
+        transform: rotate(360deg);
+    }
+}
+
+#about .welcome {
+    position: relative;
+    font-family: "Bungee Shade";
+    color: rgb(48, 34, 128);
+    font-size: 26px;
+    width: 450px;
+    letter-spacing: 3px;
+}
+
+article {
+    width: 600px;
+    letter-spacing: 3px;
+    text-align: center;
+}
+
+article h2 {
+    position: relative;
+    font-family: "Bebas Neue";
+    letter-spacing: 5px;
+}
+
+article p {
+    font-size: 22px;
+    font-family: "Mukta";
+    letter-spacing: 3px;
+    color: rgb(37, 9, 31);
+    
+}
+
+#projects {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: rgb(248, 248, 71);
+    border-bottom: 2px solid rgb(218, 27, 50);
+    height: 100vh;
+}
+
+/*.project-display {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}*/
+
+.project-message {
+    font-family: "Bungee Shade";
+    color: rgb(218, 27, 50);
+    font-size: 35px;
+    width: 450px;
+    letter-spacing: 3px;
+}
+
+.space {
+    width: 600px;
+}
+
+#project1{
+    height: 400px;
+    width: 400px;;
+}
+
+#project1 form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 350px;
+    font-family: "Mukta";
+    font-size: 30px;
+    font-weight: bold;
+}
+
+input {
+    border-radius: 8px;
+    outline: none;
+}
+
+#contact {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 40vh;
+    background-color: rgb(218, 27, 50);
+}
+
+.contact-header h2{
+    font-family:"Rubik", sans-serif;
+    font-size: 40px;
+    margin-bottom: 0px;
+}
+
+.contact-header p{
+    font-family:"Noto Sans", sans-serif;
+    font-size: 30px;
+    text-align: center;
+    margin-top: 0px;
+}
+
+.contact-links{
+    font-family: "Noto Sans", sans-serif;
+    display:flex;
+    justify-content: space-around;
+    width: 50vw; 
+    font-size: 25px;
+}
+
+.contact-links a{
+    text-decoration: none;
+    color: rgb(30,30,50);
+    display: inline-block;
+    letter-spacing: 1px;
+    text-shadow: 1px 1px 2px rgb(100,100,100);
+}
+
+.contact-links a:hover{
+    position:relative;
+    animation-name:drop;
+    animation-duration:500ms;
+    animation-iteration-count:1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes drop{
+    0%{
+        top:0px;
+    }
+    100%{
+        top:10px;
+    }
+}
+
+
+
+
+
+
 
 
 
