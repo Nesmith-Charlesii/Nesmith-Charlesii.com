@@ -228,7 +228,7 @@ header {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    border-bottom: 2px solid rgb(100, 120, 240);
+    border-bottom: 1px solid rgb(100, 120, 240);
 }
 
 .circular-image {
@@ -291,7 +291,7 @@ article p {
     align-items: center;
     justify-content: space-around;
     background-color: rgb(248, 248, 71);
-    border-bottom: 2px solid rgb(218, 27, 50);
+    border-bottom: 1px solid rgb(240, 100, 135);
     height: 100vh;
 }
 
@@ -339,7 +339,7 @@ input {
     justify-content: center;
     align-items: center;
     height: 40vh;
-    background-color: rgb(218, 27, 50);
+    background-color: rgb(50, 50, 50);
 }
 
 .contact-header h2{
@@ -365,16 +365,19 @@ input {
 
 .contact-links a{
     text-decoration: none;
-    color: rgb(30,30,50);
+    color: rgb(64, 52, 224);
     display: inline-block;
-    letter-spacing: 1px;
-    text-shadow: 1px 1px 2px rgb(100,100,100);
+    letter-spacing: 4px;
+    text-shadow: 1px 1px 2px rgb(0, 0, 0);
+    border: 1px solid black;
+    padding: 8px;
+    box-shadow: 4px 6px 1px rgb(46, 37, 37);
 }
 
 .contact-links a:hover{
     position:relative;
     animation-name:drop;
-    animation-duration:500ms;
+    animation-duration: 200ms;
     animation-iteration-count:1;
     animation-fill-mode: forwards;
 }
@@ -386,6 +389,193 @@ input {
     100%{
         top:10px;
     }
+}
+
+@media only screen and (max-width: 1366px) {
+
+    header {
+        height: 45px;
+    }
+
+    #home {
+        padding-top: 30px;
+    }
+
+    #home .center-text {
+        height: 500px;
+        width: 500px;
+    }
+    
+    #home .blue {
+        position: absolute;
+        border: 1px solid rgb(100, 120, 240);
+        z-index: 0;
+        right: 425px;
+        border-radius: 50%;
+        height: 500px;
+        width: 500px;
+        animation-name: blueMove;
+        animation-duration: 4s;
+        animation-iteration-count: infinite;
+    }
+
+    
+    @keyframes blueMove {
+        0% {
+            opacity: .4;
+            right: 425px;
+        }
+        50% {
+            opacity: 1;
+            right: 0px;
+        }
+    }
+
+    #home .yellow {
+        position: absolute;
+        z-index: 0;
+        left: 425px;
+        border: 1px solid gold;
+        border-radius: 50%;
+        height: 500px;
+        width: 500px;
+        animation-name: yellowMove;
+        animation-duration: 3s;
+        animation-iteration-count: infinite;
+        animation-fill-mode:forwards;
+    }
+
+    @keyframes yellowMove {
+        0% {
+            opacity: .4;
+            left: 425px;
+        }
+        50% {
+            opacity: 1;
+            left: 0px;
+        }
+    }
+
+    #home .center-text h1 {
+        color:rgb(103, 245, 210);
+        position: relative;
+        z-index: 2;
+        margin-top: 100px;
+        font-family:"Bebas Neue";
+        text-align: center;
+        font-size: 70px;
+        line-height: 75px;
+        text-shadow: 4px 6px 1px rgb(46, 37, 37);
+        margin-bottom: 0px;
+        animation-name: devName;
+        animation-fill-mode: forwards;
+        animation-iteration-count: 1;
+        animation-duration: 2s;
+    }
+
+    @keyframes devName {
+        0% {
+            top: -25px;
+            opacity: 0;
+        }
+        100% {
+            top: 0px;
+            opacity: 1;
+        }
+    }
+
+    #home .center-text p {
+        position: relative;
+        bottom: 0px;
+        color: white;
+        text-shadow: 4px 2px 3px black;
+        font-family: "RocknRoll One";
+        font-size: 30px;
+        text-align: center;
+        letter-spacing: 4px;
+        animation: pTagFade;
+        animation-duration: 2s;
+        animation-iteration-count: 1;
+    }
+
+    @keyframes pTagFade {
+        0% {
+            bottom: -30px;
+            opacity: 0;
+        }
+        100% {
+            bottom: 0px;
+            opacity: 1;
+        }
+    }
+
+    #about .welcome {
+        font-size: 18px;
+        width: 330px;
+    }
+
+    article {
+        width: 450px;
+    }
+
+    article h2 {
+        font-size: 20px;
+    }
+
+    article p {
+        font-size: 18px;
+    }
+
+    .circular-image {
+        width: 280px;
+        height: 280px;
+    }
+    
+    .project-message {
+        font-size: 30px;
+        width: 420px;
+    }
+
+    #project1{
+        height: 350px;
+        width: 350px;;
+    }
+
+    #project1 form {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        height: 330px;
+        font-family: "Mukta";
+        font-size: 25px;
+        font-weight: bold;
+    }
+
+    .space {
+        width: 240px;
+    }
+    
+    .contact-header h2{
+        font-family:"Bebas Neue", sans-serif;
+        font-size: 40px;
+        color: rgb(255,255,255);
+        text-shadow: 4px 6px 1px rgb(46, 37, 37);
+        margin-bottom: 0px;
+    }
+    
+    .contact-header p{
+        font-family:"Noto Sans", sans-serif;
+    }
+    
+    .contact-links{
+        font-family: "Bebas Neue", sans-serif;
+    }
+    
+    .contact-links a{
+        color: rgb(64, 52, 224);
+        text-shadow: 1px 1px 2px rgb(0, 0, 0);
+    }
+    
 }
 
 
