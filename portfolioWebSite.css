@@ -1,9 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Train+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Luckiest+Guy&display=swap');
 
+
 html, body {
     margin: 0;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 header {
@@ -12,12 +13,13 @@ header {
     align-items: center;
     height: 50px;
     background-color: black;
-    height: 100px;
+    height: 60px;
+    border-bottom: 1px inset rgb(230, 200, 155);
 }
 
 #logo {
     position: relative;
-    margin-left: 20px;
+    margin-left: 40px;
     color: white;
     font-family: "Train One";
     animation-name: logoFade;
@@ -31,7 +33,7 @@ header {
         opacity: 0;
     }   
     100% {
-        margin-left: 20px;
+        margin-left: 40px;
         opacity: 1;
     }
 }
@@ -102,7 +104,7 @@ header {
 
 @keyframes magentaFill {
     100% {
-        background-color: rgb(255,50, 50);
+        background-color: rgb(218, 27, 50);
         cursor: pointer;
     }
 }
@@ -116,13 +118,13 @@ header {
     height: 650px;
     width: 650px;
     animation-name: blueMove;
-    animation-duration: 3s;
+    animation-duration: 4s;
     animation-iteration-count: infinite;
 }
 
 @keyframes blueMove {
     0% {
-        opacity: 1;
+        opacity: .4;
         right: 635px;
     }
     50% {
@@ -140,14 +142,14 @@ header {
     height: 650px;
     width: 650px;
     animation-name: yellowMove;
-    animation-duration: 2s;
+    animation-duration: 3s;
     animation-iteration-count: infinite;
     animation-fill-mode:forwards;
 }
 
 @keyframes yellowMove {
     0% {
-        opacity: 1;
+        opacity: .4;
         left: 635px;
     }
     50% {
@@ -162,23 +164,25 @@ header {
 }*/
 
 #home .center-text h1 {
-    color: white;
+    color:rgb(103, 245, 210);
     position: relative;
     z-index: 2;
+    margin-top: 180px;
     font-family:"Bebas Neue";
     text-align: center;
     font-size: 70px;
     line-height: 75px;
+    text-shadow: 4px 6px 1px rgb(46, 37, 37);
     margin-bottom: 0px;
     animation-name: devName;
     animation-fill-mode: forwards;
     animation-iteration-count: 1;
-    animation-duration: 1s;
+    animation-duration: 2s;
 }
 
 @keyframes devName {
     0% {
-        top: -20px;
+        top: -25px;
         opacity: 0;
     }
     100% {
@@ -187,7 +191,49 @@ header {
     }
 }
 
+#home .center-text p {
+    position: relative;
+    bottom: 0px;
+    color: white;
+    text-shadow: 4px 2px 3px black;
+    font-family: "RocknRoll One";
+    font-size: 35px;
+    text-align: center;
+    letter-spacing: 4px;
+    animation: pTagFade;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+}
 
+@keyframes pTagFade {
+    0% {
+        bottom: -30px;
+        opacity: 0;
+    }
+    100% {
+        bottom: 0px;
+        opacity: 1;
+    }
+}
+
+#about {
+    background-color: white;
+    display: flex;
+    justify-content: space-around;
+}
+
+.circular-image {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    overflow: hidden;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.circular-image img {
+    width: 100%;
+}
 
 
 
